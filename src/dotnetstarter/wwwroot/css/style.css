@@ -30,6 +30,13 @@ a:hover {
 h1 {
 	font-weight: bold;
 	font-size: 2em;
+    padding-left: 15px;
+}
+
+p {
+	font-weight: normal;
+	font-size: 130%;
+    padding-left: 15px;
 }
 
 .leftHalf {
@@ -49,24 +56,6 @@ h1 {
 
 .blue {
 	color: #00aed1;
-}
-
-
-table {
-	table-layout: fixed;
-	width: 800px;
-	margin: 0 auto;
-	word-wrap: break-word;
-	padding-top:10%;
-}
-
-th {
-	border-bottom: 1px solid #000;
-}
-
-th, td {
-	text-align: left;
-	padding: 2px 2px;
 }
 
 .env-var {
