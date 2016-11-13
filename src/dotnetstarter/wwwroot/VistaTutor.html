@@ -36,46 +36,13 @@
 
     <p>&nbsp;</p>
 
-    <form class="entrena-form"><button id="botonEntrenar" onclick="Entrenar_OnClick()">Entrenar Tutor</button></form>
     <hr />
+    <p><label id="label1">Pregunta: &nbsp;&nbsp;<input id="Question" placeholder="Pregunta" type="text" /></label></p>
 
-    <script type='text/javascript'>
-        function Entrenar_OnClick() {
-
-            // Number of inputs to create
-            var number = 2;
-            // Container <div> where dynamic content will be placed
-            var container = document.getElementById("container");
-            // Clear previous contents of the container
-            while (container.hasChildNodes()) {
-                container.removeChild(container.lastChild);
-            }
-            for (i=0;i<number;i++){
-                // Append a node with a random text
-                container.appendChild(document.createTextNode("Pregunta: "));
-                // Create an <input> element, set its type and name attributes
-
-                var input = document.createElement("input");
-                input.type = "text";
-                input.name = "pregunta";
-                container.appendChild(input);
-                // Append a line break
-                container.appendChild(document.createElement("br"));
-
-                i++;
-
-                container.appendChild(document.createTextNode("Respuesta: "));
-                var input = document.createElement("input");
-                input.type = "text";
-                input.name = "respuesta";
-                container.appendChild(input);
-                i++;
-                // Append a line break
-                container.appendChild(document.createElement("br"));
-            }
-        }
-    </script>
-    <div id="container" />
+    <div id="container">
+        <p><label id="label2">Respuesta: <input id="Answer" placeholder="Respuesta" type="text" /></label></p>
+        <button2 type="button">Registrar Pregunta</button2>
+    </div>
 
 </body>
 </html>
