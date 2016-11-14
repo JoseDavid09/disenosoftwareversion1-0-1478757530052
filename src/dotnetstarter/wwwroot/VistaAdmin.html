@@ -7,14 +7,30 @@
 </head>
 <body>
     <h1 style="color: #FFFFFF;">Bienvenido, administrador:&nbsp;</h1>
-    <p>&nbsp;</p>
-    <p>Escoga la actividad que desea realizar ahora:</p>
+    <button1 type="button" onclick="save()">Cuenta</button1>
     <hr />
+    <p>Escoga la actividad que desea realizar ahora:</p>
     <section id="actividades">
-        <button1 type="button">Registrar Tutores</button1>
-        <button2 type="button">Consultar Lista de Tutores</button2>
+        <button2 type="button">Administración de Tutores</button2>
         <button3 type="button">Administrar Cursos</button3>
         <button4 type="button">Consultar Bitácora</button4>
+        <div id="result" />
     </section>
+
+    <script>
+        function save() {
+            // Check browser support
+            if (typeof (Storage) !== "undefined") {
+                // Store
+                localStorage.setItem("lastname", "Smith");
+                // Retrieve
+                document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+            }
+            else {
+                document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+            }
+        }
+    </script>
+
 </body>
 </html>

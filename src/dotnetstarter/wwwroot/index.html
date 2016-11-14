@@ -30,13 +30,13 @@
                     </div>
                 </div>
 
-                <button id="botonCrear" OnClick="Crear_OnClick">Crear</button>
+                <button id="botonCrear" OnClick="Hello()" type="button">Crear</button>
                 <p class="message">Ya se registró? <a href="#">Ingrese.</a></p>
             </form>
             <form class="login-form">
                 <input id="UsernameTextBox" type="text" placeholder="Nombre de Usuario" />
                 <input id="PasswordTextBox" type="password" placeholder="Contraseña" />
-                <button id="botonIngresar" OnClick="Ingresar_OnClick">Ingresar</button>
+                <button id="botonIngresar" OnClick="Hello()" type="button">Ingresar</button>
                 <p class="message">No se ha registrado? <a href="#">Crea una cuenta.</a></p>
             </form>
         </div>
@@ -47,11 +47,38 @@
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src="js/index.js"></script>
 
-    <script runat="server" language="C#">
-    void Crear_OnClick(Object sender, EventArgs e)
-    {
-       UsernameTextBox.Text = PasswordTextBox.Text.ToString();
-    }
+    <script type="text/javascript">
+        function Hello() {
+            alert("Hello, World!");
+        }
+    </script>
+
+    <script>
+        function Coneccion() {
+            //lets require/import the mongodb native drivers.
+            var mongodb = require('mongodb');
+
+            //We need to work with "MongoClient" interface in order to connect to a mongodb server.
+            var MongoClient = mongodb.MongoClient;
+
+            // Connection URL. This is where your mongodb server is running.
+            var url = 'mongodb://localhost:27017/Usuarios';
+
+            // Use connect method to connect to the Server
+            MongoClient.connect(url, function (err, db) {
+                if (err) {
+                    window.alert(console.log('Unable to connect to the mongoDB server. Error:', err));
+                } else {
+                    //HURRAY!! We are connected. :)
+                    window.alert(console.log('Connection established to', url));
+
+                    // do some work here with the database.
+
+                    //Close connection
+                    db.close();
+                }
+            });
+        }
     </script>
 
 </body>

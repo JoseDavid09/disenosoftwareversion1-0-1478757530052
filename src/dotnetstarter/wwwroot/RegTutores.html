@@ -13,15 +13,23 @@
     <form class="register-form">
         <p><input id="Name" placeholder="Nombre" type="text" /> <input id="email" placeholder="Correo Electrónico" type="text" /> <input id="career" placeholder="Carrera" type="text" /></p>
 
-        <p><label>Fechas de Contrato</label></p>
+        <p><label id="label1">Fecha de Finalizaci&oacute;n de Contrato</label></p>
 
-        <p><label id="label2">Fecha de Inicio</label>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<label id="label3">Fecha de Finalizaci&oacute;n</label></p>
+        <p><label id="label2" for="period">Período: </label>
+        
+            <select id="period">
+                <option value="Sem1">Semestre I</option>
+                <option value="Sem2">Semestre II</option>
+                <option value="Summer">Verano</option>
+                <option value="Bim1">Bimestre I</option>
+                <option value="Bim2">Bimestre II</option>
+                <option value="Bim3">Bimestre III</option>
+                <option value="Bim4">Bimestre IV</option>
+                <option value="Bim5">Bimestre V</option>
+                <option value="Bim6">Bimestre VI</option>
+            </select></p>
 
-        <p><input id="day1" placeholder="Día" type="text" />&nbsp; &nbsp; &nbsp; &nbsp;<input id="day2" placeholder="Día" type="text" /></p>
-
-        <p><input id="month1" placeholder="Mes " type="text" />&nbsp; &nbsp; &nbsp; &nbsp;<input id="month2" placeholder="Mes " type="text" /></p>
-
-        <p><input id="year1" placeholder="Año" type="text" />&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;<input id="year2" placeholder="Año" type="text" /></p>
+        <p><label id="label3" for="year">Año: </label><input id="year" placeholder="Año" type="text" /></p>
 
         <p><label>Contrase&ntilde;a: tutortutor</label></p>
 
