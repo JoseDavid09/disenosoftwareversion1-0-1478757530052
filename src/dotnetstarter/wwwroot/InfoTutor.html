@@ -17,6 +17,11 @@
     <p><label id="label5">Finalización de Contrato: <input id="Contract" type="text" /></label></p>
     <p><label id="label6">Preguntas Registradas: <input id="QNumber" type="text" /></label></p>
 
-    <button2 type="button">Salir</button2>
+    <button2 type="button" onclick="get()">Salir</button2>
+    <script>
+        function get() {
+            document.getElementById("QNumber").innerHTML = localStorage.getItem("lastname");
+        }
+    </script>
 </body>
 </html>
