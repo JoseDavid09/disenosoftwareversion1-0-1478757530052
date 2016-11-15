@@ -34,9 +34,9 @@
                 <p class="message">Ya se registró? <a href="#">Ingrese.</a></p>
             </form>
             <form class="login-form" onSubmit="submit()">
-                <input name="UsernameTextBox" type="text" placeholder="Nombre de Usuario" />
-                <input name="PasswordTextBox" type="password" placeholder="Contraseña" />
-                <input name="botonIngresar" type="submit" value="Ingresar" />
+                <input name="UsernameTextBox" id="UsernameTextBox" type="text" placeholder="Nombre de Usuario" />
+                <input name="PasswordTextBox" id="PasswordTextBox" type="password" placeholder="Contraseña" />
+                <input name="botonIngresar" type="submit" value="Ingresar" onclick="submit()"/>
                 <p class="message">No se ha registrado? <a href="#">Crea una cuenta.</a></p>
             </form>
         </div>
@@ -48,15 +48,17 @@
     <script src="js/index.js"></script>
 
     <script type="text/javascript">
-        function submit(){
-            if (document.getElementById("PasswordTextBox").value = '1') {
-                document.myform.action = "VistaAdmin.html";
+        function submit() {
+            window.location.assign('VistaAdmin.html');
+            /*if (document.getElementById("PasswordTextBox").value = "1") {
+                window.location.href = "VistaAdmin.html";
+                //document.myform.action = "VistaAdmin.html";
             }
             else {
                 document.myform.action = "VistaTutor.html"
                 //alert("Please check value of VAR")
                 //return false;
-            }
+            }*/
         }
     </script>
 
